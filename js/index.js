@@ -35,19 +35,6 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
       
-        window.FirebasePlugin.onTokenRefresh(function(token) {
-              console.log("prova");
-    // save this server-side and use it to push notifications to this device
-    console.log(token);
-}, function(error) {
-    console.error(error);
-});
-        window.FirebasePlugin.getToken(function(token) {
-              console.log("prova");
-    // save this server-side and use it to push notifications to this device
-    console.log(token);
-}, function(error) {
-    console.error(error);
 });
     },
     // Update DOM on a Received Event
