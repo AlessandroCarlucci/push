@@ -34,6 +34,7 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        window.FirebasePlugin.setBadgeNumber(3);
     window.FirebasePlugin.onNotificationOpen(function(notification) {
    alert(notification);
 }, function(error) {
