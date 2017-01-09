@@ -49,7 +49,12 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-
+        window.FirebasePlugin.getToken(function(token) {
+    // save this server-side and use it to push notifications to this device
+   alert(token);
+}, function(error) {
+   alert(error);
+});
         console.log('Received Event: ' + id);
     }
 };
