@@ -35,11 +35,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         window.FirebasePlugin.setBadgeNumber(3);
-    window.FirebasePlugin.onNotificationOpen(function(notification) {
-   alert(notification);
-}, function(error) {
-    alert(error);
-});
+   
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -54,6 +50,11 @@ var app = {
    alert(token);
 }, function(error) {
    alert(error);
+});
+ window.FirebasePlugin.onNotificationOpen(function(notification) {
+   alert(notification);
+}, function(error) {
+    alert(error);
 });
         console.log('Received Event: ' + id);
     }
