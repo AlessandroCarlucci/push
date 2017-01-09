@@ -55,7 +55,7 @@ var app = {
    alert(notification);
 }, function(error) {
     alert(error);
-});
+});                                                                                                                                                                                                                                                                                                                                                                                        
         console.log('Received Event: ' + id);
     }
 };
