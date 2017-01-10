@@ -34,13 +34,14 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        window.FirebasePlugin.setBadgeNumber(3);
-       window.FirebasePlugin.onTokenRefresh(function(token) {
-    // save this server-side and use it to push notifications to this device
-    console.log(token);
-}, function(error) {
-    console.error(error);
-});
+       FCMPlugin.getToken(
+  function(token){
+    alert(token);
+  },
+  function(err){
+    console.log('error retrieving token: ' + err);
+  }
+)
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -50,17 +51,7 @@ var app = {
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
-        window.FirebasePlugin.getToken(function(token) {
-    // save this server-side and use it to push notifications to this device
-   alert(token);
-}, function(error) {
-   alert(error);
-});
- window.FirebasePlugin.onNotificationOpen(function(notification) {
-   alert(notification);
-}, function(error) {
-    alert(error);
-});                                                                                                                                                                                                                                                                                                                                                                                        
+                                                                                                                                                                                                                                                                                                                                                                                       
         console.log('Received Event: ' + id);
     }
 };
