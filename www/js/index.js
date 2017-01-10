@@ -34,14 +34,12 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-       FCMPlugin.getToken(
-  function(token){
-    alert(token);
-  },
-  function(err){
-    console.log('error retrieving token: ' + err);
-  }
-)
+     window.FirebasePlugin.getToken(function(token) {
+    // save this server-side and use it to push notifications to this device
+  alert(token);
+}, function(error) {
+   alert(error);
+});
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
