@@ -3,7 +3,7 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "push-d6fe1"
+        id        = "com.mvitalia.magicbeep"
         version   = "1.0.0">
 
     <name>Hello World</name>
@@ -49,8 +49,8 @@
     <plugin name="cordova-plugin-statusbar"           source="npm" spec="~2.1.2" />
     <plugin name="cordova-plugin-vibration"           source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-whitelist"           source="npm" spec="~1.2.1" />
-    <plugin name="  cordova-plugin-fcm"          source="npm"/>
-  <plugin name="cordova-plugin-fcm-config"  />
+     <plugin name="https://github.com/AlessandroCarlucci/cordova-plugin-firebase.git"           source="git" />
+  
  
   
 
