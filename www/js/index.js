@@ -35,7 +35,12 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         window.FirebasePlugin.setBadgeNumber(3);
-   
+       window.FirebasePlugin.onTokenRefresh(function(token) {
+    // save this server-side and use it to push notifications to this device
+    console.log(token);
+}, function(error) {
+    console.error(error);
+});
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
